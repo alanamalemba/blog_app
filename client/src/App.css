@@ -1,0 +1,244 @@
+:root {
+  --light-green-color: #b9e7e7;
+}
+
+* {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.app .link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app .container {
+  width: 1024px;
+  /* login and register */
+}
+
+.container .auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--light-green-color);
+  flex-direction: column;
+}
+
+.auth h1 {
+  font-size: 20px;
+  color: teal;
+  margin-bottom: 20px;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  width: 200px;
+  gap: 20px;
+}
+
+form input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: teal;
+}
+
+form p {
+  font-size: 12px;
+  text-align: center;
+  color: red;
+}
+
+form span {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* navbar */
+
+.navbar .container {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container .logo img {
+  width: 120px;
+}
+
+.navbar .container .links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar .container .links h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.navbar .container .links span {
+  cursor: pointer;
+}
+
+.navbar .container .links .write {
+  background-color: var(--light-green-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.navbar .container .links .write:hover {
+  color: teal;
+  background-color: #fff;
+  outline: 1px solid teal;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: var(--light-green-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+footer img {
+  height: 50px;
+}
+
+/* home */
+
+.home .posts {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.home .posts .post {
+  display: flex;
+  gap: 100px;
+}
+
+.home .posts .post:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.post .img {
+  flex: 2;
+  position: relative;
+}
+
+.post .img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-green-color);
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  z-index: -1;
+}
+
+.post .img img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.post .content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content h2 {
+  font-size: 48px;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.content button {
+  font-size: 18px;
+  width: max-content;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid teal;
+  color: teal;
+}
+
+.content button:hover {
+  border: 1px solid white;
+  background-color: var(--light-green-color);
+  color: black;
+}
+
+/* Single */
+.single {
+  display: flex;
+  gap: 50px;
+
+  .content {
+    flex: 5;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10;
+      font-size: 14px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .menu {
+    flex: 2;
+  }
+}
